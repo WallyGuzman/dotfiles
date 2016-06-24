@@ -29,19 +29,6 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 Plugin 'syntastic'
 
-"Track the engine.
-"Plugin 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-":Plugin 'honza/vim-snippets'
-
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-" let g:UltiSnipsUsePythonVersion = 2
-
 call vundle#end()
 
 " Use Vim settings, rather than Vi settings (much better!).
