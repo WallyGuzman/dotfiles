@@ -2,17 +2,6 @@
 "
 " Maintainer:	Wally Guzman
 " Last change:	Thu Jun 23 18:18:08 CDT 2016
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
 
 "Use Tim Pope's pathogen
 execute pathogen#infect()
@@ -41,7 +30,7 @@ set number
 " Set Syntax on
 syntax enable
 
-" allow backspacing over everything in insert mode
+" Normal backspace
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l
 
@@ -51,8 +40,8 @@ else
   set backup		" keep a backup file
 endif
 
-" Sets how many lines of history VIM has to remember
-set history=700
+" Set history size
+set history=500
 
 " Do incremental searching
 set incsearch
