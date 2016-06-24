@@ -9,8 +9,16 @@
 #  for MS-DOS and Win32:  $VIM\_vimrc
 #	    for OpenVMS:  sys$login:.vimrc
 
-# Display
-export PS1="\$? \h:\W \u\\$ \[$(tput sgr0)\]"
+# Capture last return value
+function nonzero_return() {
+    RETVAL=$?
+    echo "$RETVAL"
+}
+
+# Customize prompt
+export PS1="\`nonzero_return\` \u@\h: \W\\$ "
+
+# Set Java Home
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Fix path stuff
