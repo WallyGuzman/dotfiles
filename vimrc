@@ -1,7 +1,7 @@
-" An example for a vimrc file.
+" My vimrc file
 "
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2008 Dec 17
+" Maintainer:	Wally Guzman
+" Last change:	Thu Jun 23 18:18:08 CDT 2016
 "
 " To use it, copy it to
 "     for Unix and OS/2:  ~/.vimrc
@@ -56,22 +56,93 @@ syntax enable
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+set whichwrap+=<,>,h,l
 
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
   set backup		" keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+
+" Sets how many lines of history VIM has to remember
+set history=700
+
+" Do incremental searching
+set incsearch
+
+" Ignore case when searching
 set ignorecase
+
+" Except for initial capital letter
+set smartcase
+
+" Don't redraw
+set lazyredraw
+
+" Regex
+set magic
+
+" Show matching bracket
+set showmatch
+
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" Set UTF-8 as default
+set encoding=utf8
+
+" Use unix as standard
+set ffs=unix,dos,mac
+
+" Enable filetype plugins
 filetype plugin indent on
+filetype indent on
+
+" Live update
+set autoread
+
+" Infer indenting
 set smartindent
 
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
+" Four spaces to a tab
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+
+" Round shifts
+set shiftround
+
+" Wildcard menu for commands
+set wildmenu
+
+" Ignore the following files
+set wildignore=*.o,*~,*.swp,*.pyc,*.class
+
+" Don't wrap lines
+set nowrap
+
+" Use _ to seperate words
+set iskeyword-=_
+
+" Show mode
+set showmode
+
+" Show current command
+set showcmd
+
+" Allow modelines
+set modeline
+
+" Show row and column
+set ruler
+
+" Always show status line
+set laststatus=2
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
