@@ -13,7 +13,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-pathogen'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
