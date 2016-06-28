@@ -6,6 +6,11 @@
 # Customize prompt
 export PS1="\$? \u@\h: \W\\$ "
 
+# Add completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
+fi
+
 # Set Java Home
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
@@ -15,7 +20,6 @@ export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
 
 # Set path
-export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
