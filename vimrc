@@ -30,7 +30,7 @@ set nocompatible
 set clipboard=unnamed
 
 " Use ; instead of :
-nnoremap ; :
+" nnoremap ; :
 
 " Set leader to space
 let mapleader=","
@@ -223,17 +223,17 @@ inoremap jj <Esc>
 set splitbelow
 set splitright
 
-if has("autocmd")
-    au BufNewFile,BufRead *.py
-        \ set tabstop=4
-        \ set nolisp
-        \ set softtabstop=4
-        \ set shiftwidth=4
-        \ set textwidth=79
-        \ set expandtab
-        \ set autoindent
-        \ set fileformat=unix
-endif
+" if has("autocmd")
+"     au BufNewFile,BufRead *.py
+"         \ set tabstop=4
+"         \ set nolisp
+"         \ set softtabstop=4
+"         \ set shiftwidth=4
+"         \ set textwidth=79
+"         \ set expandtab
+"         \ set autoindent
+"         \ set fileformat=unix
+" endif
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
