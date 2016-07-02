@@ -15,7 +15,7 @@ fi
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Set history options
-export HISTCONTROL=ignoredups:erasedups
+export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
 
@@ -31,14 +31,15 @@ export TERM=xterm
 
 # Set options
 shopt -s autocd
-shopt -s dirspell
-shopt -s globstar
-shopt -s extglob
 shopt -s cdspell
+shopt -s checkwinsize
 shopt -s cmdhist
+shopt -s dirspell
 shopt -s dotglob
-shopt -s nocaseglob
+shopt -s extglob
+shopt -s globstar
 shopt -s histappend
+shopt -s nocaseglob
 
 # SSH aliases
 alias gallardo='ssh gguzman@gallardo.cs.utexas.edu'
