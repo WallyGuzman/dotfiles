@@ -78,6 +78,7 @@ function! ToggleNumber()
     endif
 endfunc
 
+" Switch between relative and absolute line numbers
 nnoremap <leader>n :call ToggleNumber()<CR>
 
 " No more than 80 characters per line
@@ -126,7 +127,7 @@ set lazyredraw
 " At least five lines above and below
 " set scrolloff=5
 
-" Regex
+" Regex magic
 set magic
 
 " Show matching bracket
@@ -142,7 +143,7 @@ set tm=500
 set encoding=utf8
 
 " Use unix as standard
-set ffs=unix,dos,mac
+set ffs=unix,mac,dos
 
 " Enable filetype plugins
 filetype plugin indent on
@@ -185,8 +186,8 @@ set wildignore=*.o,*~,*.swp,*.pyc,*.class
 " Don't wrap lines
 set nowrap
 
-" Use _ to seperate words
-set iskeyword-=_
+" Use _ to separate words
+" set iskeyword-=_
 
 " Show mode
 set showmode
