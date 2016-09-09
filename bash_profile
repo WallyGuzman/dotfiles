@@ -16,8 +16,8 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Set history options
 export HISTCONTROL=ignoreboth:erasedups
-export HISTFILESIZE=$HISTSIZE
 export HISTSIZE=10000
+export HISTFILESIZE=$HISTSIZE
 
 # Set path
 export PATH=/usr/local/git/bin:$PATH
