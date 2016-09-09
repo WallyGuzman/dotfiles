@@ -35,6 +35,9 @@ set clipboard=unnamed
 " Set leader to space
 let mapleader=","
 
+" sudo write
+cmap w!! w !sudo tee %
+
 " By far the most annoying part of Vim
 command W w
 command Q q
