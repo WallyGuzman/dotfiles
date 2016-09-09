@@ -16,8 +16,8 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Set history options
 export HISTCONTROL=ignoreboth:erasedups
-export HISTSIZE=10000
 export HISTFILESIZE=$HISTSIZE
+export HISTSIZE=10000
 
 # Set path
 export PATH=/usr/local/git/bin:$PATH
@@ -41,18 +41,18 @@ shopt -s histappend
 shopt -s nocaseglob
 
 # Aliases
-alias ..='cd ..'
 alias ...='cd ../../'
-alias ~='cd'
-alias ls='ls -G'
-alias ll='ls -la'
-alias la='ls -a'
-alias grep='grep --color=auto'
+alias ..='cd ..'
 alias bc='bc -l'
+alias grep='grep --color=auto'
+alias la='ls -a'
+alias ll='ls -la'
+alias ls='ls -G'
 alias mkdir='mkdir -pv'
-alias vi='vim'
 alias ping='ping -c 3'
 # alias rm='rm -i' # Way too annoying
+alias vi='vim'
+alias ~='cd'
 
 # Setting PATH for Python 2.7
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
