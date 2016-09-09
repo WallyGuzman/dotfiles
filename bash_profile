@@ -1,7 +1,7 @@
 # My bash_profile file
 #
 # Maintainer:	Wally Guzman
-# Last change:	Thu Jun 23 18:47:43 CDT 2016
+# Last change:	Thu Sep  8 23:28:26 CDT 2016
 
 # Customize prompt
 export PS1="\$? \u@\h: \W\\$ "
@@ -47,6 +47,27 @@ alias mario='ssh gguzman@mario.ece.utexas.edu'
 
 # Aliases
 alias ..='cd ..'
+alias ...='cd ../../'
 alias ~='cd'
-alias ll='ls -l'
+alias ls='ls -G'
+alias ll='ls -la'
 alias la='ls -a'
+alias grep='grep --color=auto'
+alias bc='bc -l'
+alias mkdir='mkdir -pv'
+alias vi='vim'
+alias ping='ping -c 3'
+alias rm='rm -i'
+
+# Setting PATH for Python 3.5
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
+
+# added by Anaconda2 4.1.1 installer
+export PATH="/Users/wallyguzman/anaconda2/bin:$PATH"

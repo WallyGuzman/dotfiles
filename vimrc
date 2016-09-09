@@ -30,10 +30,16 @@ set nocompatible
 set clipboard=unnamed
 
 " Use ; instead of :
-nnoremap ; :
+" nnoremap ; :
 
 " Set leader to space
 let mapleader=","
+
+" By far the most annoying part of Vim
+command W w
+command Q q
+command WQ wq
+command Wq wq
 
 " Add space below
 nnoremap <leader>o o<Esc>k
@@ -58,6 +64,9 @@ nnoremap <leader>vrc :vsp $MYVIMRC<CR>
 
 " Source .vimrc
 nnoremap <leader>src :source $MYVIMRC<CR>:noh<CR>
+
+" Open shell
+nnoremap <leader>sh :sh<CR>
 
 " Toggle between number and relativenumber
 function! ToggleNumber()
@@ -158,6 +167,9 @@ set shiftwidth=4
 set tabstop=4       " Number of visual spaces per TAB
 set softtabstop=4   " Number of spaces in TAB when editing
 
+" Always terminate with LF
+set fileformat=unix
+
 " Highlight cursor line
 " set cursorline
 
@@ -223,17 +235,16 @@ inoremap jj <Esc>
 set splitbelow
 set splitright
 
-if has("autocmd")
-    au BufNewFile,BufRead *.py
-        \ set tabstop=4
-        \ set nolisp
-        \ set softtabstop=4
-        \ set shiftwidth=4
-        \ set textwidth=79
-        \ set expandtab
-        \ set autoindent
-        \ set fileformat=unix
-endif
+" if has("autocmd")
+"     au BufNewFile,BufRead *.py
+"         \ set tabstop=4
+"         \ set softtabstop=4
+"         \ set shiftwidth=4
+"         \ set textwidth=79
+"         \ set expandtab
+"         \ set autoindent
+"         \ set fileformat=unix
+" endif
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
