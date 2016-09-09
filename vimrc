@@ -35,6 +35,10 @@ set clipboard=unnamed
 " Set leader to space
 let mapleader=","
 
+" Repeat shifting
+:vnoremap < <gv
+:vnoremap > >gv
+
 " sudo write
 cmap w!! w !sudo tee %
 
