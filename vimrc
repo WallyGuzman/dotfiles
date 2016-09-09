@@ -1,7 +1,7 @@
 " My vimrc file
 "
 " Maintainer:	Wally Guzman
-" Last change:	Sat Jun 25 02:08:50 CDT 2016
+" Last change:	Fri Sep  9 00:51:34 CDT 2016
 
 "Use Tim Pope's pathogen
 execute pathogen#infect()

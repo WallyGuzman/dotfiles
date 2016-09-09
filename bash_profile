@@ -44,11 +44,13 @@ shopt -s nocaseglob
 alias ...='cd ../../'
 alias ..='cd ..'
 alias bc='bc -l'
+alias cp='cp -v'
 alias grep='grep --color=auto'
 alias la='ls -a'
 alias ll='ls -la'
 alias ls='ls -G'
 alias mkdir='mkdir -pv'
+alias mv='mv -v'
 alias ping='ping -c 3'
 # alias rm='rm -i' # Way too annoying
 alias vi='vim'
