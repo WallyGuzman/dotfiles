@@ -52,7 +52,7 @@ alias bc='bc -l'
 alias mkdir='mkdir -pv'
 alias vi='vim'
 alias ping='ping -c 3'
-alias rm='rm -i'
+# alias rm='rm -i' # Way too annoying
 
 # Setting PATH for Python 2.7
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
