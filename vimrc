@@ -19,6 +19,8 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 
 Plugin 'syntastic'
+" Plugin 'vim-airline/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
@@ -28,6 +30,9 @@ set nocompatible
 
 " Use system clipboard
 set clipboard=unnamed
+
+" Preserve undo across open/close
+set undofile
 
 " Use ; instead of :
 " nnoremap ; :
@@ -43,16 +48,23 @@ let mapleader=","
 cmap w!! w !sudo tee %
 
 " By far the most annoying part of Vim
-command W w
-command Q q
-command WQ wq
-command Wq wq
+command! W w
+command! Q q
+command! WQ wq
+command! Wq wq
+
+" airline config
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline_theme="base16_solarized"
+
+" Save file
+nnoremap <leader>s :w<CR>
 
 " Add space below
 nnoremap <leader>o o<Esc>k
 
 " Add space above
-nnoremap <leader>O O<Esc>k
+nnoremap <leader>O O<Esc>j
 
 " Turn off search highlight
 nnoremap <leader><space> :noh<CR>
@@ -88,6 +100,9 @@ endfunc
 " Switch between relative and absolute line numbers
 nnoremap <leader>n :call ToggleNumber()<CR>
 
+" Global replace on lines
+set gdefault
+
 " No more than 80 characters per line
 set textwidth=80
 
@@ -105,6 +120,13 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
+
+" Display invisible characters
+set nolist
+set listchars=tab:▸\ ,eol:¬
+
+" Don't close buffers
+set hidden
 
 " Large history size
 set history=500
@@ -133,6 +155,9 @@ set lazyredraw
 
 " At least five lines above and below
 " set scrolloff=5
+
+" Security vulnerability?
+set modelines=0
 
 " Regex magic
 set magic
@@ -187,6 +212,9 @@ set shiftround
 " Wildcard menu for commands
 set wildmenu
 
+" Wild mode for autocomplete
+set wildmode=list:longest,list:full
+
 " Ignore the following files
 set wildignore=*.o,*~,*.swp,*.pyc,*.class
 
@@ -215,6 +243,9 @@ set laststatus=2
 nnoremap Q gq
 vmap Q gq
 nmap Q gqap
+
+" Use Tab to switch back and forth
+nnoremap <TAB> :b#<CR>
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.

@@ -36,7 +36,7 @@
 ehthumbs.db
 Thumbs.db
 
-# Vim backup files #
+# Vim files #
 ####################
 *~
 *.swo
