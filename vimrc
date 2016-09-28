@@ -18,9 +18,11 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 
-Plugin 'syntastic'
 " Plugin 'vim-airline/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 
@@ -60,6 +62,9 @@ command! Wq wq
 " Save file
 nnoremap <leader>s :w<CR>
 
+" Show buffers
+nnoremap <leader>ls :ls<CR>
+
 " Add space below
 nnoremap <leader>o o<Esc>k
 
@@ -82,10 +87,13 @@ nnoremap <leader>vs :vs<CR>
 nnoremap <leader>vrc :vsp $MYVIMRC<CR>
 
 " Source .vimrc
-nnoremap <leader>src :source $MYVIMRC<CR>:noh<CR>
+nnoremap <leader>src :source $MYVIMRC<CR>
 
 " Open shell
 nnoremap <leader>sh :sh<CR>
+
+" Toggle pasting
+set pastetoggle=<leader>p
 
 " Toggle between number and relativenumber
 function! ToggleNumber()

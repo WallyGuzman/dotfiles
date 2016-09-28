@@ -41,6 +41,7 @@ shopt -s histappend
 shopt -s nocaseglob
 
 # Aliases
+# Move this into .bash_aliases
 alias ...='cd ../../'
 alias ..='cd ..'
 alias bc='bc -l'
@@ -55,6 +56,11 @@ alias ping='ping -c 3'
 # alias rm='rm -i' # Way too annoying
 alias vi='vim'
 alias ~='cd'
+
+# Tmux should use these instead of .bashrc
+alias ta='tmux -2 a -t'
+alias tls='tmux ls'
+alias tnew='tmux -2 new -s'
 
 # Setting PATH for Python 2.7
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
