@@ -59,6 +59,9 @@ command! Wq wq
 " let g:airline#extensions#tabline#enabled=1
 " let g:airline_theme="base16_solarized"
 
+" Make C-c play well with BufLeave
+inoremap <C-c> <Esc>
+
 " Save file
 nnoremap <leader>s :w<CR>
 
