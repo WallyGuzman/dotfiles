@@ -56,6 +56,7 @@ alias ping='ping -c 3'
 # alias rm='rm -i' # Way too annoying
 alias vi='vim'
 alias ~='cd'
+alias -- -='cd -'
 
 # Tmux should use these instead of .bashrc
 alias ta='tmux -2 a -t'
