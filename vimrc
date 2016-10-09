@@ -59,6 +59,9 @@ command! Wq wq
 " let g:airline#extensions#tabline#enabled=1
 " let g:airline_theme="base16_solarized"
 
+" Create tags from within vim
+command! MakeTags !ctags -R .
+
 " Make C-c play well with BufLeave
 inoremap <C-c> <Esc>
 
@@ -69,10 +72,10 @@ nnoremap <leader>s :w<CR>
 nnoremap <leader>ls :ls<CR>
 
 " Add space below
-nnoremap <leader>o o<Esc>k
+nnoremap <C-j> o<Esc>k
 
 " Add space above
-nnoremap <leader>O O<Esc>j
+nnoremap <C-k> O<Esc>j
 
 " Turn off search highlight
 nnoremap <leader><space> :noh<CR>
@@ -223,6 +226,12 @@ set shiftround
 " Wildcard menu for commands
 set wildmenu
 
+" Search down into subfolders
+set path+=**
+
+" Completion
+" set complete-=i 
+
 " Wild mode for autocomplete
 set wildmode=list:longest,list:full
 
@@ -232,8 +241,9 @@ set wildignore=*.o,*~,*.swp,*.pyc,*.class
 " Don't wrap lines
 set nowrap
 
-" Use _ to separate words
+" Use _,- to separate words
 " set iskeyword-=_
+" set iskeyword+=-
 
 " Show mode
 set showmode
