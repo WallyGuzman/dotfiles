@@ -16,8 +16,9 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 # Set history options
 export HISTCONTROL=ignoreboth:erasedups
-export HISTSIZE=10000
+export HISTSIZE=100000
 export HISTFILESIZE=$HISTSIZE
+export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 
 # Set path
 export PATH=/usr/local/git/bin:$PATH
@@ -28,7 +29,7 @@ export EDITOR=/usr/bin/vim
 export FIGNORE="~"
 export TERM=xterm
 
-# Set options
+# Bash options
 shopt -s autocd
 shopt -s cdspell
 shopt -s checkwinsize

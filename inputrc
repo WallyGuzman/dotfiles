@@ -1,0 +1,11 @@
+# My inputrc file
+#
+# Maintainer:	Wally Guzman
+# Last change:	Mon Nov  7 17:57:11 CST 2016
+
+# Readline options
+set completion-ignore-case on
+set completion-map-case on
+set expand-tilde on
+set mark-symlinked-directories on
+set show-all-if-ambiguous on
