@@ -51,8 +51,9 @@ alias grep='grep --color=auto'
 alias la='ls -a'
 alias ll='ls -la'
 alias ls='ls -FG'
+alias l='ls'
 alias mkdir='mkdir -pv'
-alias mv='mv -v'
+alias mv='mv -v -i'
 alias ping='ping -c 3'
 # alias rm='rm -i' # Way too annoying
 alias vi='vim'
@@ -77,9 +78,6 @@ export PATH
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
 export PATH
-
-# added by Anaconda2 4.1.1 installer
-export PATH="~/anaconda2/bin:$PATH"
 
 #   extract:  Extract most known archives with one command
 #   ---------------------------------------------------------
